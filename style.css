@@ -1,1 +1,83 @@
-/* Add styles here */
+:root {
+    --wood-bg: #A67B5B;
+    --card-bg: #F5F5F5;
+    --primary-text: #3D352E;
+    --accent-color: #C7A17A;
+    --white: #FFFFFF;
+    --footer-bg: #3D352E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    background-color: var(--wood-bg);
+    color: var(--primary-text);
+    padding-bottom: 80px; /* 하단 고정 버튼 높이만큼 여백 추가 */
+}
+
+header {
+    background-color: transparent;
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+main {
+    padding: 1rem;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+#order-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--footer-bg);
+    color: var(--white);
+    padding: 1rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#order-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+}
+
+#order-button {
+    background-color: var(--accent-color);
+    color: var(--primary-text);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#order-button:hover {
+    background-color: #D4B69A;
+}
+
+#order-button:active {
+    transform: scale(0.95);
+}
